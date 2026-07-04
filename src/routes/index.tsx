@@ -916,7 +916,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-transform hover:-translate-y-0.5 hover:bg-royal"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-royal px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-navy"
           >
             Send Message <ArrowRight className="h-4 w-4" />
           </button>
