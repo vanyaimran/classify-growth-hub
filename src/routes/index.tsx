@@ -559,17 +559,15 @@ const process = [
 
 function Process() {
   return (
-    <Section id="process" className="relative overflow-hidden bg-navy text-white">
-      <div className="pointer-events-none absolute inset-0 opacity-20"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+    <Section id="process" className="relative overflow-hidden bg-gradient-to-b from-white to-[#EFF6FF]">
       <div className="relative">
         <SectionHeading
           eyebrow="Our Process"
-          title={<span className="text-white">From first call to full performance</span>}
+          title={<>From first call to <span className="text-royal">full performance</span></>}
           subtitle="A four-step engagement designed for a clean launch and measurable outcomes."
         />
         <div className="relative grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="pointer-events-none absolute left-0 right-0 top-14 hidden h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent lg:block" />
+          <div className="pointer-events-none absolute left-0 right-0 top-14 hidden h-px bg-gradient-to-r from-transparent via-royal/30 to-transparent lg:block" />
           {process.map((p, i) => (
             <motion.div
               key={p.n}
@@ -578,16 +576,16 @@ function Process() {
               viewport={{ once: true }}
               variants={fadeUp}
               custom={i}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
               <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold font-display font-bold text-navy">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-royal font-display font-bold text-white shadow-sm">
                   {p.n}
                 </span>
-                <span className="h-px flex-1 bg-white/10" />
+                <span className="h-px flex-1 bg-slate-200" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-white">{p.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{p.body}</p>
+              <h3 className="mt-5 font-display text-xl font-bold text-navy">{p.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{p.body}</p>
             </motion.div>
           ))}
         </div>
