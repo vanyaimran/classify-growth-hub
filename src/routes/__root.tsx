@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Classify Enterprises is a premium Pakistan-based BPO and call center delivering inbound, outbound, Medicare and Solar customer support to businesses worldwide.",
       },
       { name: "author", content: "Classify Enterprises" },
-      { property: "og:title", content: "Classify Enterprises — Connecting People. Delivering Excellence." },
+      { property: "og:title", content: "Classify Enterprises — BPO & Call Center Solutions" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Classify Enterprises — BPO & Call Center Solutions" },
+      { name: "description", content: "Classify Enterprises is a premium Pakistan-based BPO and call center delivering inbound, outbound, Medicare and Solar customer support to businesses worldwide." },
+      { property: "og:description", content: "Classify Enterprises is a premium Pakistan-based BPO and call center delivering inbound, outbound, Medicare and Solar customer support to businesses worldwide." },
+      { name: "twitter:description", content: "Classify Enterprises is a premium Pakistan-based BPO and call center delivering inbound, outbound, Medicare and Solar customer support to businesses worldwide." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/69f5642e-d0cc-4ab2-ac18-a1ba9c456b0b/id-preview-6be3f31d--89cff7e2-6cf2-4010-b578-eb436d393ea0.lovable.app-1783160842525.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/69f5642e-d0cc-4ab2-ac18-a1ba9c456b0b/id-preview-6be3f31d--89cff7e2-6cf2-4010-b578-eb436d393ea0.lovable.app-1783160842525.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
