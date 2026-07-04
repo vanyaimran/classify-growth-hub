@@ -298,7 +298,7 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const, delay: 0.2 }}
           className="relative"
         >
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-royal/40 to-gold/30 blur-2xl" />
@@ -774,7 +774,7 @@ function CEO() {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
           className="relative"
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-royal/25 to-gold/25 blur-2xl" />
