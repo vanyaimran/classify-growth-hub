@@ -169,7 +169,7 @@ function Header() {
               <a
                 key={n.href}
                 href={n.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-navy/80 transition-colors hover:bg-navy/5 hover:text-navy"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-royal/10 hover:text-royal"
               >
                 {n.label}
               </a>
@@ -177,7 +177,7 @@ function Header() {
           </nav>
           <a
             href="#contact"
-            className="hidden shrink-0 items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-elegant transition-transform hover:-translate-y-0.5 hover:bg-royal md:inline-flex"
+            className="hidden shrink-0 items-center gap-2 rounded-full bg-royal px-5 py-2.5 text-sm font-semibold text-white shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-navy hover:shadow-glow md:inline-flex"
           >
             Get Started <ArrowRight className="h-4 w-4" />
           </a>
@@ -206,7 +206,7 @@ function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-royal px-5 py-3 text-sm font-semibold text-white"
             >
               Get Started <ArrowRight className="h-4 w-4" />
             </a>
@@ -222,15 +222,12 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden gradient-hero pt-32 pb-20 md:pt-40 md:pb-28">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
-      />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_40%,rgba(15,23,42,0.55))]" />
+      <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-royal/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       <div className="container-x relative grid gap-14 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
           <motion.div initial="hidden" animate="show" variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium tracking-wider text-white/90 uppercase backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-royal/20 bg-white/80 px-3 py-1 text-xs font-semibold tracking-wider text-royal uppercase shadow-sm backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               Enterprise BPO Solutions
             </span>
@@ -240,7 +237,7 @@ function Hero() {
             animate="show"
             variants={fadeUp}
             custom={1}
-            className="mt-6 font-display text-4xl leading-[1.05] font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mt-6 font-display text-4xl leading-[1.05] font-bold text-navy sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Connecting People. <br />
             <span className="text-gradient-gold">Delivering Excellence.</span>
@@ -250,7 +247,7 @@ function Hero() {
             animate="show"
             variants={fadeUp}
             custom={2}
-            className="mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-slate-700 md:text-lg"
           >
             Professional BPO and customer support solutions helping businesses scale with highly
             trained teams, transparent reporting and exceptional customer experiences.
@@ -264,13 +261,13 @@ function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-navy shadow-elegant transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-royal px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-navy"
             >
               Get Started <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/15"
+              className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:border-royal hover:text-royal"
             >
               Contact Us
             </a>
@@ -280,7 +277,7 @@ function Hero() {
             animate="show"
             variants={fadeUp}
             custom={4}
-            className="mt-10 grid max-w-md grid-cols-3 gap-6 text-white/85"
+            className="mt-10 grid max-w-md grid-cols-3 gap-6"
           >
             {[
               { k: "99%", v: "Satisfaction" },
@@ -288,8 +285,8 @@ function Hero() {
               { k: "100%", v: "Quality Focus" },
             ].map((s) => (
               <div key={s.v}>
-                <div className="font-display text-2xl font-bold text-white md:text-3xl">{s.k}</div>
-                <div className="text-xs text-white/60 uppercase tracking-wider mt-1">{s.v}</div>
+                <div className="font-display text-2xl font-bold text-navy md:text-3xl">{s.k}</div>
+                <div className="text-xs text-slate-600 uppercase tracking-wider mt-1 font-medium">{s.v}</div>
               </div>
             ))}
           </motion.div>
@@ -301,8 +298,8 @@ function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const, delay: 0.2 }}
           className="relative"
         >
-          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-royal/40 to-gold/30 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 shadow-elegant">
+          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-royal/15 to-gold/15 blur-2xl" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white bg-white shadow-elegant">
             <img
               src={heroImg}
               alt="Professional call center team at work"
@@ -310,22 +307,21 @@ function Hero() {
               height={1024}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy/70 to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass-dark px-4 py-3 text-white">
+            <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur">
               <div className="flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-gold text-navy">
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-royal text-white">
                   <PhoneCall className="h-4 w-4" />
                 </span>
                 <div>
-                  <div className="text-sm font-semibold">Live agents online</div>
-                  <div className="text-xs text-white/70">Average response · 20s</div>
+                  <div className="text-sm font-semibold text-navy">Live agents online</div>
+                  <div className="text-xs text-slate-600">Average response · 20s</div>
                 </div>
               </div>
               <div className="flex -space-x-2">
                 {["#D4AF37", "#2563EB", "#93C5FD"].map((c) => (
                   <span
                     key={c}
-                    className="h-8 w-8 rounded-full border-2 border-navy"
+                    className="h-8 w-8 rounded-full border-2 border-white"
                     style={{ background: c }}
                   />
                 ))}
@@ -563,17 +559,15 @@ const process = [
 
 function Process() {
   return (
-    <Section id="process" className="relative overflow-hidden bg-navy text-white">
-      <div className="pointer-events-none absolute inset-0 opacity-20"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+    <Section id="process" className="relative overflow-hidden bg-gradient-to-b from-white to-[#EFF6FF]">
       <div className="relative">
         <SectionHeading
           eyebrow="Our Process"
-          title={<span className="text-white">From first call to full performance</span>}
+          title={<>From first call to <span className="text-royal">full performance</span></>}
           subtitle="A four-step engagement designed for a clean launch and measurable outcomes."
         />
         <div className="relative grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="pointer-events-none absolute left-0 right-0 top-14 hidden h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent lg:block" />
+          <div className="pointer-events-none absolute left-0 right-0 top-14 hidden h-px bg-gradient-to-r from-transparent via-royal/30 to-transparent lg:block" />
           {process.map((p, i) => (
             <motion.div
               key={p.n}
@@ -582,16 +576,16 @@ function Process() {
               viewport={{ once: true }}
               variants={fadeUp}
               custom={i}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
               <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-gold font-display font-bold text-navy">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-royal font-display font-bold text-white shadow-sm">
                   {p.n}
                 </span>
-                <span className="h-px flex-1 bg-white/10" />
+                <span className="h-px flex-1 bg-slate-200" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-white">{p.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{p.body}</p>
+              <h3 className="mt-5 font-display text-xl font-bold text-navy">{p.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{p.body}</p>
             </motion.div>
           ))}
         </div>
@@ -819,20 +813,23 @@ function CEO() {
 function CTA() {
   return (
     <Section className="bg-surface">
-      <div className="relative overflow-hidden rounded-3xl gradient-hero p-10 text-center text-white md:p-16">
-        <div className="pointer-events-none absolute inset-0 opacity-30"
-          style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover" }} />
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-[oklch(0.16_0.05_265)] p-10 text-center text-white shadow-elegant md:p-16">
+        <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-royal/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
         <div className="relative mx-auto max-w-2xl">
-          <Eyebrow>Get in touch</Eyebrow>
-          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5" />
+            Get in touch
+          </span>
+          <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Ready to outsource your <span className="text-gradient-gold">customer support</span>?
           </h2>
-          <p className="mt-4 text-white/75 md:text-lg">
+          <p className="mt-4 text-white/85 md:text-lg">
             Let's build a team that grows your business.
           </p>
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-navy shadow-elegant transition-transform hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-navy shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-gold"
           >
             Schedule Consultation <ArrowRight className="h-4 w-4" />
           </a>
@@ -919,7 +916,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-transform hover:-translate-y-0.5 hover:bg-royal"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-royal px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-navy"
           >
             Send Message <ArrowRight className="h-4 w-4" />
           </button>
