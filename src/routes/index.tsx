@@ -813,20 +813,23 @@ function CEO() {
 function CTA() {
   return (
     <Section className="bg-surface">
-      <div className="relative overflow-hidden rounded-3xl gradient-hero p-10 text-center text-white md:p-16">
-        <div className="pointer-events-none absolute inset-0 opacity-30"
-          style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover" }} />
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-[oklch(0.16_0.05_265)] p-10 text-center text-white shadow-elegant md:p-16">
+        <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-royal/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
         <div className="relative mx-auto max-w-2xl">
-          <Eyebrow>Get in touch</Eyebrow>
-          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5" />
+            Get in touch
+          </span>
+          <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Ready to outsource your <span className="text-gradient-gold">customer support</span>?
           </h2>
-          <p className="mt-4 text-white/75 md:text-lg">
+          <p className="mt-4 text-white/85 md:text-lg">
             Let's build a team that grows your business.
           </p>
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-navy shadow-elegant transition-transform hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-navy shadow-elegant transition-all hover:-translate-y-0.5 hover:bg-gold"
           >
             Schedule Consultation <ArrowRight className="h-4 w-4" />
           </a>
