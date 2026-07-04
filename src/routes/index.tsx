@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring, type Variants } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Phone,
@@ -45,12 +45,12 @@ export const Route = createFileRoute("/")({
 
 /* ---------- Small helpers ---------- */
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const, delay: i * 0.06 },
   }),
 };
 
