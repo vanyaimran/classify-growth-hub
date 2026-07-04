@@ -206,7 +206,7 @@ function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-royal px-5 py-3 text-sm font-semibold text-white"
             >
               Get Started <ArrowRight className="h-4 w-4" />
             </a>
