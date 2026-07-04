@@ -70,7 +70,7 @@
   --secondary: oklch(0.55 0.22 265);
   --secondary-foreground: oklch(0.99 0 0);
   --muted: oklch(0.96 0.008 250);
-  --muted-foreground: oklch(0.48 0.03 260);
+  --muted-foreground: oklch(0.37 0.03 260);  /* ~#334155 slate-700 for AA contrast */
   --accent: oklch(0.78 0.13 85);
   --accent-foreground: oklch(0.21 0.05 265);
   --destructive: oklch(0.6 0.24 27);
@@ -123,6 +123,13 @@
 }
 
 @utility gradient-hero {
+  background:
+    radial-gradient(1000px 500px at 85% 0%, #DBEAFE 0%, transparent 60%),
+    radial-gradient(700px 400px at 0% 100%, #EFF6FF 0%, transparent 60%),
+    linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+}
+
+@utility gradient-hero-dark {
   background:
     radial-gradient(1200px 500px at 80% 10%, color-mix(in oklab, var(--royal) 35%, transparent), transparent 60%),
     radial-gradient(800px 400px at 10% 90%, color-mix(in oklab, var(--gold) 18%, transparent), transparent 60%),
