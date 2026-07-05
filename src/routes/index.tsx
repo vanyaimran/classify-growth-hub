@@ -152,19 +152,22 @@ function Header() {
         scrolled ? "glass shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4">
-        <a href="#top" className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-navy to-royal text-white shadow-elegant">
-            <Headphones className="h-5 w-5" />
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate font-display text-base font-bold leading-tight text-navy">
-              Classify Enterprises
-            </span>
-            <span className="hidden text-[10px] font-medium tracking-widest text-muted-foreground uppercase sm:block">
-              BPO • Call Center
-            </span>
-          </span>
+      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 md:py-4">
+        <a href="#top" className="flex min-w-0 items-center" aria-label="Classify Enterprises home">
+          <img
+            src={logoDark.url}
+            alt="Classify Enterprises"
+            className="hidden h-11 w-auto md:block lg:h-12"
+            width={1079}
+            height={247}
+          />
+          <img
+            src={markDark.url}
+            alt="Classify Enterprises"
+            className="h-10 w-auto md:hidden"
+            width={302}
+            height={247}
+          />
         </a>
         <div className="flex items-center gap-2">
           <nav className="hidden items-center gap-1 lg:flex">
