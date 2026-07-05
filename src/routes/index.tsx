@@ -38,9 +38,6 @@ import {
 import heroImg from "@/assets/hero-callcenter.jpg";
 import ceoImg from "@/assets/ahmad-saleem.jpeg.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
-import logoDark from "@/assets/classify-logo-dark.png.asset.json";
-import logoWhite from "@/assets/classify-logo-white.png.asset.json";
-import markDark from "@/assets/classify-mark-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -155,14 +152,14 @@ function Header() {
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 md:py-4">
         <a href="#top" className="flex min-w-0 items-center" aria-label="Classify Enterprises home">
           <img
-            src={logoDark.url}
+           src="/logo.png"
             alt="Classify Enterprises"
             className="hidden h-auto w-[200px] md:block lg:w-[220px]"
             width={1536}
             height={303}
           />
           <img
-            src={markDark.url}
+            src="/logo.png"
             alt="Classify Enterprises"
             className="h-11 w-auto md:hidden"
             width={430}
