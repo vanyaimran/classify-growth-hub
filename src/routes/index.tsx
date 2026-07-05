@@ -962,11 +962,14 @@ function Footer() {
     <footer className="bg-navy text-white/80">
       <div className="container-x grid gap-10 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold text-navy">
-              <Headphones className="h-5 w-5" />
-            </span>
-            <span className="font-display text-lg font-bold text-white">Classify Enterprises</span>
+          <div className="flex items-center">
+            <img
+              src={logoWhite.url}
+              alt="Classify Enterprises"
+              className="h-12 w-auto md:h-14"
+              width={1079}
+              height={247}
+            />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
             Connecting People. Delivering Excellence. Premium BPO and customer support solutions
