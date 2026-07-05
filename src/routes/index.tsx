@@ -38,6 +38,9 @@ import {
 import heroImg from "@/assets/hero-callcenter.jpg";
 import ceoImg from "@/assets/ceo-portrait.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoDark from "@/assets/classify-logo-dark.png.asset.json";
+import logoWhite from "@/assets/classify-logo-white.png.asset.json";
+import markDark from "@/assets/classify-mark-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -149,19 +152,22 @@ function Header() {
         scrolled ? "glass shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4">
-        <a href="#top" className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-navy to-royal text-white shadow-elegant">
-            <Headphones className="h-5 w-5" />
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate font-display text-base font-bold leading-tight text-navy">
-              Classify Enterprises
-            </span>
-            <span className="hidden text-[10px] font-medium tracking-widest text-muted-foreground uppercase sm:block">
-              BPO • Call Center
-            </span>
-          </span>
+      <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 md:py-4">
+        <a href="#top" className="flex min-w-0 items-center" aria-label="Classify Enterprises home">
+          <img
+            src={logoDark.url}
+            alt="Classify Enterprises"
+            className="hidden h-11 w-auto md:block lg:h-12"
+            width={1079}
+            height={247}
+          />
+          <img
+            src={markDark.url}
+            alt="Classify Enterprises"
+            className="h-10 w-auto md:hidden"
+            width={302}
+            height={247}
+          />
         </a>
         <div className="flex items-center gap-2">
           <nav className="hidden items-center gap-1 lg:flex">
@@ -956,11 +962,14 @@ function Footer() {
     <footer className="bg-navy text-white/80">
       <div className="container-x grid gap-10 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold text-navy">
-              <Headphones className="h-5 w-5" />
-            </span>
-            <span className="font-display text-lg font-bold text-white">Classify Enterprises</span>
+          <div className="flex items-center">
+            <img
+              src={logoWhite.url}
+              alt="Classify Enterprises"
+              className="h-12 w-auto md:h-14"
+              width={1079}
+              height={247}
+            />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
             Connecting People. Delivering Excellence. Premium BPO and customer support solutions
