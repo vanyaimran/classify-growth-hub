@@ -38,6 +38,9 @@ import {
 import heroImg from "@/assets/hero-callcenter.jpg";
 import ceoImg from "@/assets/ceo-portrait.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoDark from "@/assets/classify-logo-dark.png.asset.json";
+import logoWhite from "@/assets/classify-logo-white.png.asset.json";
+import markDark from "@/assets/classify-mark-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
