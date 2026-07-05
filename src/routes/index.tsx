@@ -780,7 +780,7 @@ function CEO() {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-royal/25 to-gold/25 blur-2xl" />
           <div className="relative overflow-hidden rounded-[1.75rem] border border-black/5 shadow-elegant">
             <img
-              src={ceoImg}
+              src={ceoImg.url}
               alt="Ahmad Saleem, Founder & CEO"
               width={896}
               height={1120}
