@@ -36,7 +36,7 @@ import {
   Star,
 } from "lucide-react";
 import heroImg from "@/assets/hero-callcenter.jpg";
-import ceoImg from "@/assets/ceo-portrait.jpg";
+import ceoImg from "@/assets/ahmad-saleem.jpeg.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoDark from "@/assets/classify-logo-dark.png.asset.json";
 import logoWhite from "@/assets/classify-logo-white.png.asset.json";
