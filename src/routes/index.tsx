@@ -157,17 +157,18 @@ function Header() {
           <img
             src={logoDark.url}
             alt="Classify Enterprises"
-            className="hidden h-11 w-auto md:block lg:h-12"
-            width={1079}
-            height={247}
+            className="hidden h-auto w-[200px] md:block lg:w-[220px]"
+            width={1536}
+            height={303}
           />
           <img
             src={markDark.url}
             alt="Classify Enterprises"
-            className="h-10 w-auto md:hidden"
-            width={302}
-            height={247}
+            className="h-11 w-auto md:hidden"
+            width={430}
+            height={303}
           />
+
         </a>
         <div className="flex items-center gap-2">
           <nav className="hidden items-center gap-1 lg:flex">
@@ -966,10 +967,11 @@ function Footer() {
             <img
               src={logoWhite.url}
               alt="Classify Enterprises"
-              className="h-12 w-auto md:h-14"
-              width={1079}
-              height={247}
+              className="h-auto w-[220px] md:w-[240px]"
+              width={1536}
+              height={303}
             />
+
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
             Connecting People. Delivering Excellence. Premium BPO and customer support solutions
