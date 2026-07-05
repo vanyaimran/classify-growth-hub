@@ -967,10 +967,11 @@ function Footer() {
             <img
               src={logoWhite.url}
               alt="Classify Enterprises"
-              className="h-12 w-auto md:h-14"
-              width={1079}
-              height={247}
+              className="h-auto w-[220px] md:w-[240px]"
+              width={1536}
+              height={303}
             />
+
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
             Connecting People. Delivering Excellence. Premium BPO and customer support solutions
