@@ -132,6 +132,7 @@ const nav = [
   { label: "Process", href: "#process" },
   { label: "Industries", href: "#industries" },
   { label: "Contact", href: "#contact" },
+  { label: "Careers", href: "/careers" },
 ];
 
 function Header() {
