@@ -14,16 +14,139 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      applications: {
+        Row: {
+          application_id: string
+          application_status: string
+          career_goals: string
+          city: string
+          cnic: string | null
+          created_at: string
+          date_of_birth: string
+          email: string
+          expected_salary: number
+          field_of_study: string
+          first_name: string
+          gender: string
+          has_work_experience: boolean
+          highest_qualification: string
+          hr_notes: string | null
+          id: string
+          institution_name: string
+          interest_reason: string
+          key_responsibilities: string | null
+          last_name: string
+          notice_period: string
+          phone: string
+          preferred_shift: string
+          previous_company: string | null
+          previous_job_title: string | null
+          referral_name: string | null
+          resume_filename: string | null
+          resume_url: string
+          total_experience: string
+          vacancy_source: string
+        }
+        Insert: {
+          application_id?: string
+          application_status?: string
+          career_goals: string
+          city: string
+          cnic?: string | null
+          created_at?: string
+          date_of_birth: string
+          email: string
+          expected_salary: number
+          field_of_study: string
+          first_name: string
+          gender: string
+          has_work_experience: boolean
+          highest_qualification: string
+          hr_notes?: string | null
+          id?: string
+          institution_name: string
+          interest_reason: string
+          key_responsibilities?: string | null
+          last_name: string
+          notice_period: string
+          phone: string
+          preferred_shift: string
+          previous_company?: string | null
+          previous_job_title?: string | null
+          referral_name?: string | null
+          resume_filename?: string | null
+          resume_url: string
+          total_experience: string
+          vacancy_source: string
+        }
+        Update: {
+          application_id?: string
+          application_status?: string
+          career_goals?: string
+          city?: string
+          cnic?: string | null
+          created_at?: string
+          date_of_birth?: string
+          email?: string
+          expected_salary?: number
+          field_of_study?: string
+          first_name?: string
+          gender?: string
+          has_work_experience?: boolean
+          highest_qualification?: string
+          hr_notes?: string | null
+          id?: string
+          institution_name?: string
+          interest_reason?: string
+          key_responsibilities?: string | null
+          last_name?: string
+          notice_period?: string
+          phone?: string
+          preferred_shift?: string
+          previous_company?: string | null
+          previous_job_title?: string | null
+          referral_name?: string | null
+          resume_filename?: string | null
+          resume_url?: string
+          total_experience?: string
+          vacancy_source?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      submit_application: { Args: { payload: Json }; Returns: string }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +273,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+    },
   },
 } as const
