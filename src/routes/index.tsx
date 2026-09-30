@@ -38,6 +38,7 @@ import {
 import heroImg from "@/assets/hero-callcenter.jpg";
 import ceoImg from "@/assets/ahmad-saleem.jpeg.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoWhite from "@/assets/classify-logo-white.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
